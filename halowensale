@@ -1,0 +1,14 @@
+public static int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+         int gamesBought = 0;
+    int currentPrice = p; 
+
+    while (s >= currentPrice) {
+        s -= currentPrice; 
+        gamesBought++; 
+        currentPrice = Math.max(currentPrice - d, m);
+    }
+
+    return gamesBought;
+
+    }
